@@ -5,11 +5,11 @@ This install.sh script will install xrdp, lxde, pulseaudio and create a remote r
 # running
 wget https://cdn.jsdelivr.net/gh/51sec/xrdp4arm@main/install.sh && bash install.sh
 
-If you already installed your desktop and xrdp with similar commands:
+If you already installed your desktop and xrdp with following similar commands:
 - apt install xrdp -y
 - apt install ubuntu-desktop
 
-You can run following command to add sound support to your Ubuntu desktop:
+You can run this command to add sound support to your Ubuntu desktop:
 wget https://cdn.jsdelivr.net/gh/51sec/xrdp4arm@main/install_xrdp_audio.sh && bash install_xrdp_audio.sh
 
 

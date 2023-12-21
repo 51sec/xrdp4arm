@@ -26,9 +26,11 @@ function install_xrdp_pa() {
 	cd /tmp
 	apt source pulseaudio
 	pulsever=$(pulseaudio --version | awk '{print $2}')
+	mv /tmp/pulseaudio-$pulsever*1 /tmp/pulseaudio-$pulsever
 	cd /tmp/pulseaudio-$pulsever
 	# ./configure --without-caps
-	./configure
+        meson build && cd build
+        ninja && sudo ninja install
 	git clone https://github.com/neutrinolabs/pulseaudio-module-xrdp.git
 	cd pulseaudio-module-xrdp
 	./bootstrap
